@@ -31,7 +31,7 @@ class LinkNode extends Component {
     })
   }
 
-  componentWillUpdate(props, state) {
+  UNSAFE_componentWillUpdate(props, state) {
     if (state.mounted && state.presetData.text !== this.text.innerText) {
       this.setState({
         presetData: { text: this.text.innerText }

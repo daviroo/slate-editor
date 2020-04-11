@@ -9,7 +9,7 @@ import DraggableColorPicker from './DraggableColorPicker'
 if (require('exenv').canUseDOM) require('./ColorButton.css')
 
 class ColorButton extends Component {
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     const { changeState, outerState: { color }, initialState } = this.props
 
     // Set initial state received as a prop
