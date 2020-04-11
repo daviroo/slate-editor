@@ -22,7 +22,7 @@ class LinkDataModal extends Component {
     return props.node.data.get('text')
   }
 
-  componentWillUpdate(props) {
+  UNSAFE_componentWillUpdate(props) {
     const hasDiffText = this.props.presetData.text !== props.presetData.text
 
     if (!this.hasNodeText(this.props) && hasDiffText) {
@@ -33,7 +33,7 @@ class LinkDataModal extends Component {
     }
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     const hasDiffText = this.props.presetData.text !== this.state.imageAttributes.text
 
     // update the text input value according to text that
