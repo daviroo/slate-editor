@@ -3,7 +3,6 @@
   "version": "5.1.0",
   "description": "SlateJS color mark plugin.",
   "main": "dist/index.js",
-  "repository": "https://github.com/nossas/slate-editor",
   "author": "Nossas <tech@nossas.org> (http://github.com/nossas)",
   "license": "MIT",
   "publishConfig": {
