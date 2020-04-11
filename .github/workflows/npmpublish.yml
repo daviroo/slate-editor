@@ -11,20 +11,7 @@ on:
       - master
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - run: npm install
-        working-directory: ./packages/slate-editor-color-plugin
-      - run: npm run prepare
-        working-directory: ./packages/slate-editor-color-plugin
-
   publish-gpr:
-    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -32,6 +19,8 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
+      - run: npm install
+        working-directory: ./packages/slate-editor-color-plugin
       - run: npm publish
         working-directory: ./packages/slate-editor-color-plugin
         env:
